@@ -1,6 +1,0 @@
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
-
-echo "running precommit eslint config check..."
-npx lint-staged
-echo "precommit eslint config check done! >> "

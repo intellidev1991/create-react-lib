@@ -1,82 +1,60 @@
 {
-  "name": "@intellidev1991/create-react-xlib",
+  "name": "create-react-xlib",
+  "description": "suppose this npm package name is 'my-lib'",
   "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "main": "./dist/index.umd.js",
-  "module": "./dist/index.es.js",
-  "types": "./dist/index.d.ts",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/intellidev1991/create-react-xlib"
-  },
-  "keywords": [
-    "react",
-    "library",
-    "component",
-    "module",
-    "typescript",
-    "intellidev1991"
-  ],
-  "author": "intellidev1991",
-  "bugs": {
-    "url": "https://github.com/intellidev1991/create-react-xlib/issues"
-  },
-  "homepage": "https://github.com/intellidev1991/create-react-xlib#readme",
-  "license": "MIT",
+  "version": "0.0.3",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview",
-    "format": "prettier --write src/**/*.{ts,tsx,css} --config ./.prettierrc",
-    "prepare": "husky install"
+    "dev": "vite serve docs",
+    "doc": "rimraf docs/dist && vite build docs && serve -s docs/dist",
+    "ssr": "rimraf docs/dist && vite-pages ssr docs && serve docs/dist",
+    "build": "tsc && vite build"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx}": [
-      "eslint --quiet"
-    ]
+  "dependencies": {},
+  "devDependencies": {
+    "@mdx-js/mdx": "^1.6.22",
+    "@mdx-js/react": "^1.6.22",
+    "@types/node": "^17.0.42",
+    "@types/react": "^17.0.3",
+    "@types/react-router-dom": "^5.1.7",
+    "@typescript-eslint/eslint-plugin": "^5.42.1",
+    "@typescript-eslint/parser": "^5.42.1",
+    "@vitejs/plugin-react": "^2.0.1",
+    "autoprefixer": "^10.4.13",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.19",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^5.2.0",
+    "rimraf": "^3.0.2",
+    "sass": "^1.56.1",
+    "serve": "^14.0.1",
+    "tailwindcss": "^3.2.3",
+    "typed-css-modules": "^0.7.2",
+    "typed-scss-modules": "^7.0.1",
+    "vite": "^3.0.7",
+    "vite-pages-theme-doc": "^3.1.4",
+    "vite-plugin-dts": "^1.7.0",
+    "vite-plugin-linter": "^1.2.0",
+    "vite-plugin-mdx": "^3.5.6",
+    "vite-plugin-react-pages": "^3.1.8",
+    "vite-tsconfig-paths": "^3.5.2"
   },
   "peerDependencies": {
     "react": "16.8.0 || >=17.x",
     "react-dom": "16.8.0 || >=17.x"
   },
-  "devDependencies": {
-    "@types/node": "^18.11.9",
-    "@types/react": "^18.0.24",
-    "@types/react-dom": "^18.0.8",
-    "@typescript-eslint/eslint-plugin": "^5.42.1",
-    "@typescript-eslint/parser": "^5.42.1",
-    "@vitejs/plugin-react": "^2.2.0",
-    "eslint": "^8.27.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-jsx-a11y": "^6.6.1",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-react": "^7.31.10",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-simple-import-sort": "^8.0.0",
-    "husky": "^8.0.2",
-    "prettier": "^2.7.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "typescript": "^4.6.4",
-    "vite": "^3.2.3",
-    "vite-plugin-dts": "^1.7.0",
-    "vite-plugin-linter": "^1.2.0",
-    "vite-tsconfig-paths": "^3.5.2"
-  },
-  "files": [
-    "dist"
-  ],
+  "main": "dist/index.umd.js",
+  "module": "dist/index.es.js",
+  "types": "dist/src/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/index.es.js",
-      "require": "./dist/index.umd.js"
-    }
-  }
+      "require": "./dist/index.umd.js",
+      "import": "./dist/index.es.js"
+    },
+    "./dist/style.css": "./dist/style.css"
+  },
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ]
 }
