@@ -2,12 +2,13 @@
   "name": "create-react-xlib",
   "description": "suppose this npm package name is 'my-lib'",
   "private": true,
-  "version": "0.0.9",
+  "version": "0.0.10",
   "scripts": {
     "dev": "vite serve docs",
     "doc": "rimraf docs/dist && vite build docs && serve -s docs/dist",
     "ssr": "rimraf docs/dist && vite-pages ssr docs && serve docs/dist",
     "build": "tsc && vite build",
+    "prepublish": "rimraf ./dist && npm run build",
     "postinstall": "is-ci || husky install",
     "prepare": "is-ci || husky install"
   },
