@@ -4,11 +4,11 @@
  * @order 1
  */
 
-import React from "react";
-import { Box } from "my-lib";
+import React from 'react'
+import { Box } from 'my-lib'
 
 const Demo1 = () => {
-  return <Box />;
-};
+  return <Box />
+}
 
-export default Demo1;
+export default Demo1

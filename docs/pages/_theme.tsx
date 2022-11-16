@@ -1,26 +1,26 @@
-import React from "react";
-import { createTheme, defaultSideNavs } from "vite-pages-theme-doc";
+import React from 'react'
+import { createTheme, defaultSideNavs } from 'vite-pages-theme-doc'
 
-import Component404 from "./404";
+import Component404 from './404'
 
-import "./app.css";
+import './app.css'
 
 export default createTheme({
   logo: <div className="text-3xl font-bold">📘 Document</div>,
   topNavs: [
     {
-      label: "Index",
-      path: "/",
+      label: 'Index',
+      path: '/',
       activeIfMatch: {
         // match all first-level paths
-        path: "/:foo",
+        path: '/:foo',
         exact: true,
       },
     },
     {
-      label: "Components",
-      path: "/components/Button",
-      activeIfMatch: "/components",
+      label: 'Components',
+      path: '/components/Button',
+      activeIfMatch: '/components',
     },
   ],
   sideNavs: (ctx) => {
@@ -28,27 +28,27 @@ export default createTheme({
       groupConfig: {
         components: {
           demos: {
-            label: "Demos (dev only)",
+            label: 'Demos (dev only)',
             order: -1,
           },
           general: {
-            label: "General",
+            label: 'General',
             order: 1,
           },
-          "data-display": {
-            label: "Data Display",
+          'data-display': {
+            label: 'Data Display',
             order: 2,
           },
         },
       },
-    });
+    })
   },
   Component404,
   footer: (ctx) => {
     return {
-      theme: "light",
-      copyright: "Made with ❤️ by Intellidev",
-      message: "Buy me a coffee ☕ if you like this project. Accept crypto",
-    };
+      theme: 'light',
+      copyright: 'Made with ❤️ by Intellidev',
+      message: 'Buy me a coffee ☕ if you like this project. Accept crypto',
+    }
   },
-});
+})

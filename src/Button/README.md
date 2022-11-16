@@ -36,11 +36,11 @@ will result in:
 In jsx page, You can render TsInfo like this:
 
 ```tsx
-import tsInfoData from "./types.ts?tsInfo=ButtonProps";
-import { TsInfo } from "vite-pages-theme-doc";
+import tsInfoData from './types.ts?tsInfo=ButtonProps'
+import { TsInfo } from 'vite-pages-theme-doc'
 
 export default function Page() {
-  return <TsInfo {...tsInfoData} />;
+  return <TsInfo {...tsInfoData} />
 }
 ```
 
@@ -62,10 +62,10 @@ In jsx page, You can render file text like this:
 
 ```tsx
 // https://vitejs.dev/guide/assets.html#importing-asset-as-string
-import text from "./types.ts?raw";
-import { FileText } from "vite-pages-theme-doc";
+import text from './types.ts?raw'
+import { FileText } from 'vite-pages-theme-doc'
 
 export default function Page() {
-  return <FileText text={text} syntax="ts" />;
+  return <FileText text={text} syntax="ts" />
 }
 ```
