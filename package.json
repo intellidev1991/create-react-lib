@@ -2,7 +2,7 @@
   "name": "create-react-xlib",
   "description": "suppose this npm package name is 'my-lib'",
   "private": true,
-  "version": "0.0.13",
+  "version": "0.0.14",
   "scripts": {
     "dev": "vite serve docs",
     "doc": "rimraf docs/dist && vite build docs && serve -s docs/dist",
