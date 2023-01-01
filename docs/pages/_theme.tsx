@@ -48,7 +48,8 @@ export default createTheme({
     return {
       theme: 'light',
       copyright: 'Made with ❤️ by Intellidev',
-      message: 'Buy me a coffee ☕ if you like this project. Accept crypto',
+      message:
+        "This is a footer message. You can use it to display some information about your site. It's optional.",
     }
   },
 })
